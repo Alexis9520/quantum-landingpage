@@ -25,8 +25,6 @@ function PageLoader() {
   );
 }
 
-const RECAPTCHA_SITE_KEY = "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"; // TODO: Reemplazar con tu clave real de reCAPTCHA v3
-
 function AppContent() {
   useSmoothScroll();
   useAnalytics();
