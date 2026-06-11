@@ -1,0 +1,147 @@
+@import '@fontsource/playfair-display/400.css';
+@import '@fontsource/dm-sans/400.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 4.3%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 8.2%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 8.2%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 270 76% 53%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 240 5% 65%;
+    --accent: 330 81% 60%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 270 30% 17%;
+    --input: 270 30% 17%;
+    --ring: 270 76% 53%;
+    --radius: 0.625rem;
+  }
+
+  html {
+    scroll-behavior: auto;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 19.0921px;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  body {
+    background-color: #0B0B0B;
+    color: #FFFFFF;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 19.0921px;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.1;
+  }
+
+  * {
+    border-color: #2A1F3D;
+  }
+
+  ::selection {
+    background: rgba(138, 43, 226, 0.35);
+    color: #fff;
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .font-body {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .text-display-size {
+    font-size: clamp(40px, 8vw, 80.0052px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+  }
+
+  .text-body-size {
+    font-size: 19.0921px;
+    line-height: 1.6;
+  }
+
+  .glass-card {
+    background: rgba(21, 21, 21, 0.85);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(138, 43, 226, 0.1);
+  }
+
+  .text-gradient-purple {
+    background: linear-gradient(135deg, #A855F7 0%, #EC4899 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #FCD34D 0%, #F59E0B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .grain-overlay {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.03;
+  }
+
+  .section-padding {
+    padding-left: clamp(16px, 4vw, 64px);
+    padding-right: clamp(16px, 4vw, 64px);
+  }
+
+  @media (max-width: 640px) {
+    .section-padding {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+  .perspective-grid {
+    perspective: 1200px;
+    perspective-origin: 50% 50%;
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+}
+
+@layer utilities {
+  .will-change-transform {
+    will-change: transform;
+  }
+}
