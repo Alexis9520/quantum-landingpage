@@ -18,7 +18,7 @@ const products = [
   {
     name: "Quantum Botica",
     tagline: "Software para Boticas",
-    description: "Gestión de inventario, ventas, Kardex, proveedores y documentos para la DigiEmi.",
+    description: "Gestión de inventario, ventas, Kardex, proveedores y documentos para la Digemit.",
     icon: Pill,
     image: "/assets/quantum-botica.webp",
     color: "from-emerald-500 to-teal-500",
